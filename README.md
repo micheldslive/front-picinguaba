@@ -1,5 +1,5 @@
 <p align="center">	
-  <img src="https://github.com/micheldslive/nubank/blob/master/src/assets/images/nu.svg" width="110" alt="Nubank" />
+  <img src="https://github.com/micheldslive/front-picinguaba/blob/master/src/assets/images/logo-picinguaba.svg" width="110" alt="Nubank" />
 </p>	
 
 <p align="center">
@@ -11,11 +11,11 @@
 </p>
 
 <p align="center">
-  <img alt="Netflix" src="https://img.shields.io/static/v1?label=nu&message=bank&color=purple&labelColor=grey">
+  <img alt="Picinguaba" src="https://img.shields.io/static/v1?label=vila&message=picinguaba&color=orange&labelColor=grey">
   
-  <img alt="React" src="https://img.shields.io/static/v1?label=stack&message=React&color=purple&labelColor=grey">
+  <img alt="React" src="https://img.shields.io/static/v1?label=stack&message=React&color=orange&labelColor=grey">
   
-  <img alt="Portfolio" src="https://img.shields.io/static/v1?label=portfolio&message=NUBANK&color=purple&labelColor=grey">
+  <img alt="Portfolio" src="https://img.shields.io/static/v1?label=portfolio&message=PICINGUABA&color=orange&labelColor=grey">
 </p>
 
 ---
@@ -24,13 +24,13 @@
 
 **"Projeto com objetivo de recriar a home page do Nubank utilizando minhas skills atuais no ReactJS.**
 
-![https://github.com/micheldslive/nubank/blob/master/demo/demo.gif](https://github.com/micheldslive/nubank/blob/master/demo/demo.gif)
+![https://github.com/micheldslive/nubank/blob/master/demo/demo.gif](https://github.com/micheldslive/front-picinguaba/blob/master/demo/demo.gif)
 
-#### 👀 Pré-visualização do Projeto: https://nu-bank.vercel.app/
+#### 👀 Pré-visualização do Projeto: https://front-picinguaba.vercel.app/
 ---
 
 ## 📌 Seções
-Site composto por 2 seções:
+Site composto por 6 seções:
 
 - **Página inicial** Página incial do site;
 - **404:** Página de erro que será exibida nas demais seções;
@@ -46,6 +46,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e suas dependencias:
     - body-scroll-lock
     - styled-components
     - react-router-dom
+    - axios
+    - gsap
 
 ---
 
@@ -54,7 +56,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e suas dependencias:
 #### Clone o repositório usando o seguinte comando ou baixe
 
 ```
-git clone https://github.com/micheldslive/nubank.git
+git clone https://github.com/micheldslive/front-picinguaba.git
 ```
 
 #### Para instalar as dependências
@@ -79,7 +81,7 @@ O servidor estará disponível no http://127.0.0.1:3000 em seu navegador
 
 ---
 
-## 💘 Desenvolvedor<br>
+## 💘 Desenvolvedores<br>
 <table>
   <tr>
     <td align="center">
@@ -87,6 +89,16 @@ O servidor estará disponível no http://127.0.0.1:3000 em seu navegador
         <img src="https://avatars.githubusercontent.com/u/55795597?v=4" width="100" alt="Foto no GitHub"/><br>
         <sub>
           <b>Michel Domingos</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+    <tr>
+    <td align="center">
+      <a href="https://github.com/GuilhermeGilCampbell">
+        <img src="https://avatars.githubusercontent.com/u/30280649?v=4" width="100" alt="Foto no GitHub"/><br>
+        <sub>
+          <b>Guilherme Campbell</b>
         </sub>
       </a>
     </td>
