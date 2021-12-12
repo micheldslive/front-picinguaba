@@ -96,9 +96,7 @@ O servidor estará disponível no http://127.0.0.1:3000 em seu navegador
         </sub>
       </a>
     </td>
-  </tr>
-    <tr>
-    <td align="center">
+        <td align="center">
       <a href="https://github.com/GuilhermeGilCampbell">
         <img src="https://avatars.githubusercontent.com/u/30280649?v=4" width="100" alt="Foto no GitHub"/><br>
         <sub>
