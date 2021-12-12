@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Home",
+    "go": "/"
+  },
+  {
+    "title": "Alimentação",
+    "go": "/alimentacao"
+  },
+  {
+    "title": "Acomodação",
+    "go": "/acomodacao"
+  },
+  {
+    "title": "Roteiros",
+    "go": "/roteiros"
+  },
+  {
+    "title": "Eventos",
+    "go": "/eventos"
+  }
+]
