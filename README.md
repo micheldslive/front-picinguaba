@@ -1,5 +1,5 @@
 <p align="center">	
-  <img src="https://github.com/micheldslive/front-picinguaba/blob/master/src/assets/images/logo-picinguaba.svg" width="110" alt="Nubank" />
+  <img src="https://github.com/micheldslive/front-picinguaba/blob/master/src/assets/images/logo-picinguaba.svg" width="230" alt="Nubank" />
 </p>	
 
 <p align="center">
@@ -24,7 +24,7 @@
 
 **"Projeto com objetivo de recriar a home page do Nubank utilizando minhas skills atuais no ReactJS.**
 
-![https://github.com/micheldslive/nubank/blob/master/demo/demo.gif](https://github.com/micheldslive/front-picinguaba/blob/master/demo/demo.gif)
+![https://github.com/micheldslive/front-picinguaba/blob/master/demo/demo.gif](https://github.com/micheldslive/front-picinguaba/blob/master/demo/demo.gif)
 
 #### 👀 Pré-visualização do Projeto: https://front-picinguaba.vercel.app/
 ---
@@ -33,7 +33,11 @@
 Site composto por 6 seções:
 
 - **Página inicial** Página incial do site;
-- **404:** Página de erro que será exibida nas demais seções;
+- **Alimentação:** Página falando sobre os pontos de Alimentação da Vila;
+- **Acomodação:** Página falando sobre os pontos de Acomodação da Vila;
+- **Roteiros:** Página indicando os melhores Roteiros da Vila;
+- **Eventos:** Página falando dos eventos mais importantes na Vila;
+- **404:** Página de erro que será exibida quando o endereço for inexistente;
 
 ---
 
