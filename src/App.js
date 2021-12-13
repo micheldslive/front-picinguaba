@@ -7,6 +7,7 @@ import Header from "components/header";
 import { Layout } from "assets/styles/main";
 import Routers from "routes";
 import Footer from "components/footer";
+import ScrollToTop from "utils/ScrollToTop";
 
 const App = () => {
   const [scroll, setScroll] = useState(false);
@@ -17,11 +18,14 @@ const App = () => {
     setScroll(currentScroll < 1400);
   };
 
+  console.log(scroll);
+
   return (
     <Router>
       <Preloader />
       <Header />
       <Layout />
+      <ScrollToTop />
       <TransitionGroup>
         <CSSTransition nodeRef={nodeRef} classNames="fade-enter" timeout={500}>
           <div className="main-container" ref={nodeRef} onScroll={(e) => listenScrollEvent(e.target)} >

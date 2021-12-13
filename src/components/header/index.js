@@ -30,6 +30,7 @@ export default class Header extends Component {
     super(props);
     this.state = { open: false, button: false };
     this.openClick = this.openClick.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
   }
 
   componentDidMount = () => {
@@ -40,6 +41,10 @@ export default class Header extends Component {
 
   openClick = () => {
     this.setState({ open: !this.state.open });
+  };
+
+  closeMenu = () => {
+    this.setState({ open: false });
   };
 
   render() {
@@ -56,7 +61,7 @@ export default class Header extends Component {
             <ListContainer>
               {Menu.map(({title, go}) => (
                 <List key={title}>
-                  <MenuLink to={go}>{title}</MenuLink>
+                  <MenuLink to={go} onClick={this.closeMenu} activeClassName="active">{title}</MenuLink>
                 </List>
               ))}
             </ListContainer>
