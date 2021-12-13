@@ -28,14 +28,14 @@ class Hamburger extends Component {
 export default class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = { open: false, button: false };
+    this.state = { open: false, sticky: false };
     this.openClick = this.openClick.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
   }
 
   componentDidMount = () => {
     onscroll = () => {
-      this.setState({ button: window.scrollY > 150 });
+      this.setState({ sticky: window.scrollY > 150 });
     };
   };
 
@@ -50,10 +50,10 @@ export default class Header extends Component {
   render() {
     const open = this.state.open;
     open ? disableBodyScroll(document) : enableBodyScroll(document);
-
+    
     return (
       <HeaderContent open={open}>
-        <Container>
+        <Container sticky={this.state.sticky}>
           <LogoLink to="/">
             <Logo />
           </LogoLink>

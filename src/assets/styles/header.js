@@ -15,7 +15,8 @@ export const HeaderContent = styled.header`
 `;
 
 export const Container = styled.section`
-  height: 100px;
+  transition: 300ms;
+  height: ${({ sticky }) => (sticky ? "75px" : "100px")};
   display: flex;
   justify-content: space-between;
   align-items: center;

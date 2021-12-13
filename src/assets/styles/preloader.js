@@ -15,7 +15,7 @@ export const PreloaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: bg-out 1s 6s linear forwards;
+  animation: bg-out 1s 5s linear forwards;
   opacity: 1;
   z-index: 11;
 
@@ -40,11 +40,14 @@ export const PreloaderMain = styled.div`
 `;
 
 export const PicinguabaSun = styled(PicinguabaSVG)`
+  width: 130px;
+  height: 118px;
+
   path {
     fill: transparent;
     stroke-width: 0.6;
     stroke: white;
-    animation: stroke-animate 4s 1s linear forwards;
+    animation: stroke-animate 3s 1s linear forwards;
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
 
@@ -57,7 +60,7 @@ export const PicinguabaSun = styled(PicinguabaSVG)`
       }
       90% {
         stroke-dashoffset: 250;
-        fill: white;
+        fill: transparent;
       }
       100% {
         stroke-dashoffset: 0;
