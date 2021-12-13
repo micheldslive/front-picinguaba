@@ -1,10 +1,10 @@
 import NavMenu from "services/nav-menu.json";
+import { Container } from "assets/styles/global";
 import {
-  Container,
   FooterContent,
   FooterRow,
   FooterCol,
-  LogoPicinguaba,
+  LogoSVG,
   ColTitle,
   Paragraph,
   ColLink,
@@ -19,11 +19,10 @@ import {
   Instagram,
   Linkedin,
   Youtube,
+  LogoPicinguabaIMG,
 } from "assets/styles/footer";
 
 const Footer = () => {
-
-  console.log(NavMenu);
   
   return (
     <FooterContent>
@@ -32,7 +31,7 @@ const Footer = () => {
         <Container>
           <FooterRow>
             <FooterCol lg={6} md={6} sm={12}>
-              <LogoPicinguaba />
+              <LogoPicinguabaIMG src={LogoSVG} alt="Logo Picinguaba" />
               <Paragraph>
                 Uma vila de pescadores preservada entre o mar e a floresta.
               </Paragraph>
@@ -65,13 +64,11 @@ const Footer = () => {
       <CopyMain>
         <Container>
           <FooterRow>
-            <p>
-              <CopyContent>
-                <CopyText>
-                  Feito com ❤️ por: Equipe 02 - Desafio Chefão
-                </CopyText>
-              </CopyContent>
-            </p>
+            <CopyContent>
+              <CopyText>
+                Feito com ❤️ por: Equipe 02 - Desafio Chefão
+              </CopyText>
+            </CopyContent>
           </FooterRow>
         </Container>
       </CopyMain>

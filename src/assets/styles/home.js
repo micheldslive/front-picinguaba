@@ -1,29 +1,8 @@
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
-import BigBG from "assets/images/home-bg-b.jpg";
-import MediumBG from "assets/images/home-bg-m.jpg";
-import SmallBG from "assets/images/home-bg-s.jpg";
-import { ReactComponent as ArrowButton } from "assets/images/arrow-b.svg";
-import HoldCards from "assets/images/holding-card.png";
+import VilaImageJPG from "assets/images/home/pescador-rede.jpg";
 
-export { ArrowButton, HoldCards };
-
-export const HomeContent = styled.div`
-  padding: 80px 0;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  background-image: url(${BigBG});
-
-  @media (min-width: 769px) and (max-width: 1180px) {
-    background-image: url(${MediumBG});
-  }
-
-  @media (max-width: 768px) {
-    background-image: url(${SmallBG});
-  }
-`;
+export { VilaImageJPG };
 
 export const Container = styled.section``;
 
@@ -37,124 +16,128 @@ export const HomeCol = styled(Col)`
   margin-bottom: 35px;
 `;
 
-export const HomeTitle = styled.h1`
-  font-size: 48px;
-  color: white;
+export const VilaContent = styled.div`
+  padding: 8em 0;
+  background-color: var(--darkBlue);
+`;
 
-  @media (max-width: 768px) {
-    font-size: 30px;
+export const VilaRow = styled(Row)``;
+
+export const VilaCol = styled(Col)`
+  padding: 0;
+  margin-bottom: 35px;
+  padding: 0 35px;
+
+  @media (max-width: 1180px) {
+    padding: 0 15px;
   }
 `;
 
-export const HomeSubtitle = styled.h2`
-  font-size: 24px;
-  color: white;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
+export const VilaDescription = styled.p`
+  padding-top: 15px;
+  color: var(--gray2);
+  line-height: 22px;
 `;
 
-export const Form = styled.div`
-  position: relative;
-  border-radius: 16px;
-  background-color: white;
-  max-width: 330px;
-  margin: auto;
-`;
-
-export const FormContent = styled.div`
-  padding: 24px;
-`;
-
-export const FormTitle = styled.h3`
-  padding-bottom: 32px;
-  font-size: 20px;
-`;
-
-export const FormGroup = styled.div`
+export const VilaImageContent = styled.div`
   position: relative;
 `;
 
-export const FormInput = styled.input`
-  background-color: transparent;
-  border-width: 0px 0px 1px;
-  box-sizing: border-box;
-  color: rgb(17, 17, 17);
-  caret-color: currentcolor;
-  display: block;
-  margin: 0px;
-  padding: 8px 0px;
-  text-align: left;
-  outline: none;
+export const VilaImage = styled.img`
+  border-radius: 20px;
   width: 100%;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(17, 17, 17, 0.2);
-  --inputCurrentColor: #111111;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  filter: drop-shadow(6px 4px 20px rgba(0, 0, 0, 0.46));
 `;
 
-export const FormLabel = styled.label`
+export const VilaTitleContent = styled.div`
   position: absolute;
-  display: inline-block;
-  color: #004d40;
-  top: 100px;
-  pointer-events: none;
-  font-size: ${({ valid }) => (valid ? "12px" : "14px")};
-  transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
-  position: relative;
-  top: ${({ valid }) => (valid ? "-60px" : "-30px")};
-
-  ${FormInput}:focus ~ & {
-    top: -60px;
-    font-size: 12px;
-  }
-`;
-
-export const FormButton = styled.button`
-  border-radius: 100px;
-  background: var(--orange);
-  color: white;
-  height: 48px;
-  display: flex;
-  width: calc(100% - 40px);
-  padding: 0 20px;
-  margin-bottom: 16px;
-  justify-content: space-between;
-  align-items: center;
-  vertical-align: middle;
-  overflow: hidden;
-  position: relative;
-  border: 0px;
-  transition: all 0.2s ease;
-
-  &:hover {
-    background: var(--orange2);
-  }
-`;
-
-export const CardContent = styled.div`
-  padding: 64px 0;
-  background-color: white;
-`;
-
-export const CardTitle = styled.h2`
-  font-size: 48px;
-  color: var(--orange);
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-export const CardSubtitle = styled.span`
-  font-size: 48px;
-  line-height: 48px;
-`;
-
-export const CardImage = styled.img`
+  bottom: -40px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
+export const VilaTitle = styled.h1`
+  color: white;
+  font-family: "Staatliches", cursive;
+  font-size: 80px;
+  font-weight: 100;
+  line-height: 80px;
+  transition: 300ms;
+
+  @media (max-width: 500px) {
+    font-size: 50px;
+    line-height: 50px;
+  }
+`;
+
+export const VilaParallaxBG = styled.div`
+  height: ${({ gradient }) => (gradient ? "650px" : "500px")};
+  width: 100%;
+  background: url(${({ bg }) => (bg ? bg : "")});
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+
+  ${({ gradient }) => gradient &&
+  `
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(19, 55, 84, 1) -1%,
+      rgba(19, 55, 84, 0) 100%
+    );
+    width: 100%;
+    height: 300px;
+    margin-top: -1px;
+  }
+  `
+  }
+`;
+
+export const VilaParallaxBorder = styled.div`
+  height: 70px;
+  background: url(${({ bdBg }) => (bdBg ? bdBg : "")}) ${({ bdColor }) => (bdColor ? bdColor : "")};
+  background-size: cover;
+  background-position: center;
+`;
+
+export const VilaParallaxContainer = styled.div`
+  background: ${({ bgColor }) => (bgColor ? bgColor : "")};
+`;
+
+export const VilaParallaxContent = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4em 20px;
+  text-align: center;
+  color: white;
+`;
+
+export const VilaParallaxTitle = styled.h1`
+  font-family: "Staatliches", cursive;
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 80px;
+  transition: 300ms;
+
+  @media (max-width: 500px) {
+    font-size: 40px;
+  }
+`;
+
+export const VilaParallaxDescription = styled.p`
+  font-size: 20px;
+  font-weight: 600;
+`;
+
+export const VilaParallaxEnd = styled.div`
+  height: 130px;
+  margin-bottom: -130px;
+  width: 100%;
+  background-color: var(--green1);
 `;

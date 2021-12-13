@@ -5,9 +5,11 @@ import { ReactComponent as FaceSVG } from "assets/images/facebook.svg";
 import { ReactComponent as InstaSVG } from "assets/images/instagram.svg";
 import { ReactComponent as LinkedSVG } from "assets/images/linkedin.svg";
 import { ReactComponent as YouTubeSVG } from "assets/images/youtube.svg";
-import { ReactComponent as LogoSVG } from "assets/images/logo-picinguaba-white.svg";
+import LogoSVG from "assets/images/logo-picinguaba-white.webp";
 
-export const LogoPicinguaba = styled(LogoSVG)`
+export { LogoSVG };
+
+export const LogoPicinguabaIMG = styled.img`
   width: 100%;
   max-width: 240px;
 `;
@@ -15,7 +17,6 @@ export const LogoPicinguaba = styled(LogoSVG)`
 export const FooterAnimation = styled.div`
   position: relative;
   height: 130px;
-  z-index: -2;
 `;
 
 export const FooterContent = styled.footer`
@@ -26,12 +27,12 @@ export const FooterContent = styled.footer`
     position: absolute;
     left: 0;
     right: 0;
-    z-index: -2;
     transition: clip-path 1s;
   }
 
   & ${FooterAnimation}::after {
     background-color: black;
+    height: calc(100% + 2px);
   }
 
   & ${FooterAnimation}::before {
@@ -45,8 +46,6 @@ export const FooterContent = styled.footer`
     clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%);
   }
 `;
-
-export const Container = styled.section``;
 
 export const FooterMain = styled.div`
   background-color: black;

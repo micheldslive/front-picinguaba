@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet-async";
 import Video from "components/background/video";
-import { BorderBrushTop } from "components/bordas/borderBrushTop";
+import Produtos from "components/produtos";
+import Vila from "components/home/vila";
 
 export default class Home extends Component {
   constructor(props) {
@@ -10,17 +11,16 @@ export default class Home extends Component {
     this.state = { valid: false };
   }
 
-
   render() {
-
     return (
       <>
         <Helmet>
           <title>Vila Picinguaba - Uma vila de pescadores preservada entre o mar e a floresta.</title>
-          <meta name="description" content="Vila Picinguaba - Uma vila de pescadores preservada entre o mar e a floresta."/>
+          <meta name="description" content="Uma vila de pescadores preservada entre o mar e a floresta."/>
         </Helmet>
         <Video />
-        <BorderBrushTop />
+        <Produtos />
+        <Vila />
       </>
     );
   }

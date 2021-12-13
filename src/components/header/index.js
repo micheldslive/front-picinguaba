@@ -61,7 +61,7 @@ export default class Header extends Component {
             <ListContainer>
               {Menu.map(({title, go}) => (
                 <List key={title}>
-                  <MenuLink to={go} onClick={this.closeMenu} activeClassName="active">{title}</MenuLink>
+                  <MenuLink to={go} onClick={this.closeMenu}>{title}</MenuLink>
                 </List>
               ))}
             </ListContainer>

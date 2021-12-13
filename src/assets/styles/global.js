@@ -1,19 +1,24 @@
 import "bootstrap/dist/css/bootstrap-grid.min.css";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import TitleSVG from "assets/images/title-wave.svg";
 
-export default createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
 
 :root {
   --gray: #F7F6F2;
-  --gray2: #ededed;
+  --gray2: #F1F1F1;
   --gray3: #ccc;
   --darkBlue: #133754;
-  --blue: #2ED9DE;
+  --blue: #0194C6;
+  --blue1: #2EC6EF;
   --orange: #EA772A;
+  --orange1: #FFC62F;
   --orange2: #e15e0a;
   --orange3: #ea914b;
+  --green: #51734B;
+  --green1: #75BD81;
   --black: #191919;
   --black1: #222222;
   --black2: #a2a2a2;
@@ -84,4 +89,25 @@ section {
   transition: opacity 250ms ease-in;
 }
 
+`;
+
+export const Container = styled.section``;
+
+export const GlobalTitle = styled.h1`
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Staatliches", cursive;
+  gap: 20px;
+  font-size: 40px;
+  font-weight: 100;
+
+  &::before {
+    content: "";
+    background: url(${TitleSVG});
+    width: 100px;
+    height: 13px;
+    background-repeat: no-repeat;
+  }
 `;
