@@ -5,14 +5,14 @@ import { api } from "services/api";
 
 
 const Detalhes = () => {
-  const [produtos, setProdutos] = useState();
-  const params = useParams();
+//   const [produtos, setProdutos] = useState();
+//   const params = useParams();
 
-  useEffect(() => {
-    api.get(`produtos/${params.id}`).then((res) => {
-      setProdutos(res.data[0]);
-    });
-  }, [params]);
+//   useEffect(() => {
+//     api.get(`produtos/${params.id}`).then((res) => {
+//       setProdutos(res.data[0]);
+//     });
+//   }, [params]);
 
   return (
     <div className="DetalhesContent">
@@ -26,7 +26,7 @@ const Detalhes = () => {
             </div>
           </Col>
           <Col className="col-lg-6 col-md-6 col-12">
-            <div className="CardContent">
+            {/* <div className="CardContent">
               <p className="Titulo">{produtos.nome}</p>
               <p className="Valor">R$ {produtos.preco}</p>
               <p className="Parcelas">{produtos.parcela}</p>
@@ -35,7 +35,7 @@ const Detalhes = () => {
               <p><strong>Categoria:</strong> {produtos.categoria}</p>
               <a href="/" className="btn btn-primary mb-4">Comprar este produto</a>
               <input type="text" placeholder="Digite seu CEP" />
-            </div>
+            </div> */}
           </Col>
         </Row>
       </Container>
