@@ -55,7 +55,7 @@ export const MenuLink = styled(NavLink)`
       width: 0;
       height: 7px;
       background: url(${WaveComp});
-      background-repeat-y: no-repeat;
+      background-repeat: repeat-x;
       transition: all 0.4s linear;
     }
 
@@ -171,7 +171,7 @@ export const Burger = styled.button`
     }
 
     span {
-      width: 16px;
+      width: 20px;
       height: 2px;
       background: var(--darkBlue);
       border-radius: 10px;
@@ -180,11 +180,11 @@ export const Burger = styled.button`
       transform-origin: 1px;
 
       :nth-child(1) {
-        transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+        transform: ${({ open }) => (open ? "rotate(35deg)" : "rotate(0)")};
       }
 
       :nth-child(2) {
-        transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+        transform: ${({ open }) => (open ? "rotate(-35deg)" : "rotate(0)")};
       }
     }
   }

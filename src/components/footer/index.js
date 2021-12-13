@@ -13,6 +13,7 @@ import {
   CopyMain,
   CopyContent,
   CopyText,
+  CopyLink,
   RS,
   RSLink,
   Facebook,
@@ -66,7 +67,7 @@ const Footer = () => {
           <FooterRow>
             <CopyContent>
               <CopyText>
-                Feito com ❤️ por: Equipe 02 - Desafio Chefão
+                Feito com ❤️ pela <CopyLink href="https://linktr.ee/vilapicinguaba" target="_blank" rel="noreferrer"> Equipe 02 - Desafio Chefão</CopyLink>
               </CopyText>
             </CopyContent>
           </FooterRow>

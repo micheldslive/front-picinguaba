@@ -114,6 +114,15 @@ export const CopyText = styled.span`
   color: white;
 `;
 
+export const CopyLink = styled.a`
+  color: white;
+  transition: 300ms;
+
+  &:hover {
+    color: black;
+  }
+`;
+
 export const RS = styled.div`
   display: flex;
   -webkit-box-pack: end;

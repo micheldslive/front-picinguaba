@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { ReactComponent as ArrowButton } from "assets/images/arrow-b.svg";
 
 export const MainError = styled.div`
   position: relative;
@@ -44,8 +43,4 @@ export const Link = styled(NavLink)`
   &:hover {
     color: var(--orange);
   }
-`;
-
-export const Arrow = styled(ArrowButton)`
-  margin-top: -2px;
 `;

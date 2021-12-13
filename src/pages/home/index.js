@@ -5,12 +5,6 @@ import Produtos from "components/produtos";
 import Vila from "components/home/vila";
 
 export default class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.cpf = React.createRef();
-    this.state = { valid: false };
-  }
-
   render() {
     return (
       <>

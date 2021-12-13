@@ -6,7 +6,6 @@ import {
   Error,
   ErrorText,
   Link,
-  Arrow,
 } from "assets/styles/404";
 
 export default class NotFound extends Component {
@@ -28,7 +27,7 @@ export default class NotFound extends Component {
               que não existem em nossa Vila.
             </ErrorText>
             <Link to="/">
-              Voltar para a página principal <Arrow />
+              Voltar para a página principal
             </Link>
           </Container>
         </MainError>
