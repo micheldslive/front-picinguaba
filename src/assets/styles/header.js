@@ -8,7 +8,7 @@ export const HeaderContent = styled.header`
   width: 100%;
   height: ${({ open }) => (open ? "100%" : "")};
   background-color: white;
-  border-bottom: 1px solid #ddd;
+  border-bottom: ${({ sticky }) => (sticky ? "1px solid #ddd" : "")};;
   transition: all 0.1s linear;
   z-index: 1;
   background-color: var(--gray);

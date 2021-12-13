@@ -1,22 +1,27 @@
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import {
   ImageContainer,
   ImageContent,
   ImageTitle,
 } from "assets/styles/background";
 import { BorderBrushTop } from "assets/styles/bordas";
-import LazyLoad from "react-lazyload";
 
 const ImageBgTop = ({ background, title }) => {
+  const animate = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(animate.current, { opacity: 0 }, { opacity: 1, duration: 1 });
+  });
+
   return (
     <>
-      <LazyLoad height={200}>
-        <ImageContainer background={background}>
-          <ImageContent>
-            <ImageTitle>{title}</ImageTitle>
-          </ImageContent>
-        </ImageContainer>
-        <BorderBrushTop />
-      </LazyLoad>
+      <ImageContainer background={background} ref={animate}>
+        <ImageContent>
+          <ImageTitle>{title}</ImageTitle>
+        </ImageContent>
+      </ImageContainer>
+      <BorderBrushTop />
     </>
   );
 };

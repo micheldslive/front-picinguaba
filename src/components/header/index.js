@@ -35,7 +35,7 @@ export default class Header extends Component {
 
   componentDidMount = () => {
     onscroll = () => {
-      this.setState({ sticky: window.scrollY > 150 });
+      this.setState({ sticky: window.scrollY > 250 });
     };
   };
 
@@ -52,7 +52,7 @@ export default class Header extends Component {
     open ? disableBodyScroll(document) : enableBodyScroll(document);
     
     return (
-      <HeaderContent open={open}>
+      <HeaderContent open={open} sticky={this.state.sticky}>
         <Container sticky={this.state.sticky}>
           <LogoLink to="/">
             <Logo />

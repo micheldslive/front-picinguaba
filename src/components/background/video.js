@@ -1,20 +1,34 @@
-import { Component } from "react";
-import { Refugio, Title, TitleContent, VideoContainer, VideoContent, VideoElement } from "assets/styles/background";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import {
+  Refugio,
+  Title,
+  TitleContent,
+  VideoContainer,
+  VideoContent,
+  VideoElement,
+} from "assets/styles/background";
 import VideoSRC from "assets/video/video-picinguaba.mp4";
 
-export default class Video extends Component {
-  render() {
-    return (
-      <VideoContainer>
-        <Title>
-          <TitleContent>
-            <Refugio />
-          </TitleContent>
-        </Title>
-        <VideoContent>
-          <VideoElement src={VideoSRC} autoPlay muted loop data-object-fit="cover" />
-        </VideoContent>
-      </VideoContainer>
-    );
-  }
-}
+const Video = () => {
+  const animate = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(animate.current, { opacity: 0 }, { opacity: 1, duration: 1 });
+  });
+
+  return (
+    <VideoContainer ref={animate}>
+      <Title>
+        <TitleContent>
+          <Refugio />
+        </TitleContent>
+      </Title>
+      <VideoContent>
+        <VideoElement src={VideoSRC} autoPlay muted loop data-object-fit="cover" />
+      </VideoContent>
+    </VideoContainer>
+  );
+};
+
+export default Video;
