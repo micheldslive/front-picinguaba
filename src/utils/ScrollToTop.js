@@ -9,7 +9,6 @@ const ScrollToTop = () => {
     if (current !== location.pathname) {
       window.scrollTo(0, 0);
       setCurrent(location.pathname);
-      console.log("entrou");
     }
   }, [location, current]);
 
