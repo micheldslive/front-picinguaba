@@ -5,7 +5,7 @@ import Alimentacao from "pages/alimentacao";
 import Acomodacao from "pages/acomodacao";
 import Roteiros from "pages/roteiros";
 import Eventos from "pages/eventos";
-import Detalhes from "pages/detalhes";
+//import Detalhes from "pages/detalhes";
 import NotFound from "pages/404";
 
 export default class Routers extends Component {
