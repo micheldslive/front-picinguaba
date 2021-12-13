@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+//import { useEffect, useState } from "react";
+//import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import { api } from "services/api";
+//import { api } from "services/api";
 
 
 const Detalhes = () => {

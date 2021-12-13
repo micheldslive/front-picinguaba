@@ -17,7 +17,7 @@ export default class Routers extends Component {
         <Route exact path="/acomodacao" element={<Acomodacao />} />
         <Route exact path="/roteiros" element={<Roteiros />} />
         <Route exact path="/eventos" element={<Eventos />} />
-        <Route exact path="/detalhes/:id" element={<Detalhes />} />
+        {/* <Route exact path="/detalhes/:id" element={<Detalhes />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     );
