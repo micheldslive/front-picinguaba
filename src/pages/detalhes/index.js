@@ -21,7 +21,7 @@ const Detalhes = () => {
           <Col className="col-lg-6 col-md-6 col-12">
             <div className="CardContainer">
               <div className="CardImagem">
-                <img src={produtos?.imagem} alt="imagem-1" />
+                {/* <img src={produtos?.imagem} alt="imagem-1" /> */}
               </div>
             </div>
           </Col>
