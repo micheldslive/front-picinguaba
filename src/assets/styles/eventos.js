@@ -1,9 +1,12 @@
 import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Texture } from "./produtos";
 
 export const EventosContent = styled.div`
-padding-bottom: 4em;
+  padding: 3em 0 4em;
+  background: url(${Texture});
+  background-size: cover;
 `;
 
 export const EventosContainer = styled.section`

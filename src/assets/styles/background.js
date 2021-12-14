@@ -74,6 +74,11 @@ export const ImageContainer = styled.div`
 
 export const ImageContent = styled.div`
   padding: 14em 0;
+  transition: 300ms;
+
+  @media (max-width: 1079px) {
+    padding: 7em 0;
+  }
 `;
 
 export const ImageTitle = styled.h1`
@@ -83,4 +88,9 @@ export const ImageTitle = styled.h1`
   gap: 20px;
   font-size: 60px;
   font-weight: 100;
+  transition: inherit;
+
+  @media (max-width: 1079px) {
+    font-size: 45px;
+  }
 `;

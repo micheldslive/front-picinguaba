@@ -95,14 +95,17 @@ export const Container = styled.section``;
 
 export const GlobalTitleContent = styled.div`
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 650px;
+  margin: 0 auto;
 `;
 
 export const GlobalTitle = styled.h1`
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  color: ${({color}) => (color ? "white" : "var(--darkBlue)")};
+  color: ${({ color }) => (color ? "white" : "var(--darkBlue)")};
   font-family: "Staatliches", cursive;
   gap: 20px;
   font-size: 40px;
@@ -115,4 +118,10 @@ export const GlobalTitle = styled.h1`
     height: 13px;
     background-repeat: no-repeat;
   }
+`;
+
+export const GlobalSubtitle = styled.p`
+  padding-top: 20px;
+  margin: 0 15px;
+  text-align: center;
 `;

@@ -1,8 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { gsapEffect } from "utils/gsapEffect";
+import { Api } from "services/api";
 import ImageBgTop from "components/background/image";
 import Background from "assets/images/eventos/eventos-bg.jpg";
+import { GlobalTitle, GlobalTitleContent } from "assets/styles/global";
 import {
   EventoCard,
   EventoCol,
@@ -14,15 +16,18 @@ import {
   EventosContent,
   EventoTitle,
 } from "assets/styles/eventos";
-import Event01 from "assets/images/eventos/event-1.png";
-import { GlobalTitle, GlobalTitleContent } from "assets/styles/global";
 
 const Eventos = () => {
   const animate = useRef();
+  const [produtos, setProdutos] = useState([]);
+  const category = 1;
 
   useEffect(() => {
     gsapEffect(animate.current);
-  });
+    Api.get(`/produtos/categoria/${category}`).then((res) => {
+      setProdutos(res.data);
+    });
+  }, [category]);
 
   return (
     <>
@@ -34,30 +39,25 @@ const Eventos = () => {
         />
       </Helmet>
       <ImageBgTop background={Background} title={"Eventos"} />
+      <GlobalTitleContent>
+        <GlobalTitle color={false}>Eventos</GlobalTitle>
+      </GlobalTitleContent>
       <EventosContent>
         <EventosContainer>
-          <GlobalTitleContent>
-            <GlobalTitle color={false}>Eventos</GlobalTitle>
-          </GlobalTitleContent>
           <EventoRow ref={animate}>
-            <EventoCol lg={6} md={6}>
-              <EventoLink to="/">
-                <EventoCard>
-                  <EventoIMG src={Event01} alt="" />
-                  <EventoTitle>Corrida de Canoa</EventoTitle>
-                  <EventoDesc>
-                    A tradicional corrida de canoa caiçara acontece no proximo
-                    dia 15/12, seguindo a tradicao e mantendo viva a memoria
-                    ancestral contida em cada movimento. Para alem da competicao
-                    e premiacao, o bem maior que se cultiva atraves desse evento
-                    é o valor em reconhecer que muita historia e muitas maos
-                    foram precisas para que hoje pudessemos usufruir desse meio
-                    de transporte, que ate pouco tempo era meio de
-                    sobrevivencia.
-                  </EventoDesc>
-                </EventoCard>
-              </EventoLink>
-            </EventoCol>
+            {produtos?.map(({ id, nome, descricao, imagem_thumb }) => (
+              <EventoCol key={id} lg={6} md={6}>
+                <EventoLink to={`/detalhes/${id}`}>
+                  <EventoCard>
+                    <EventoIMG src={imagem_thumb} alt={nome} />
+                    <EventoTitle>{nome}</EventoTitle>
+                    <EventoDesc>
+                      {descricao}
+                    </EventoDesc>
+                  </EventoCard>
+                </EventoLink>
+              </EventoCol>
+            ))}
           </EventoRow>
         </EventosContainer>
       </EventosContent>
