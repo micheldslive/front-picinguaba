@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, createRef } from "react";
 import { GlobalTitle } from "assets/styles/global";
 import {
   Container,
@@ -15,16 +15,25 @@ import {
 } from "assets/styles/home";
 import { VilaParallax } from "./parallax";
 import { parallax } from "services/home";
+import { gsapEffect } from "utils/gsapEffect";
 
 export default class Vila extends Component {
+  constructor(props) {
+    super(props);
+    this.animate = createRef();
+  }
+
+  componentDidMount() {
+    gsapEffect(this.animate.current);
+  }
   render() {
     return (
       <>
         <VilaContent>
           <Container>
-            <VilaRow>
+            <VilaRow ref={this.animate}>
               <VilaCol lg={6} md={12}>
-                <GlobalTitle>
+                <GlobalTitle color={true}>
                   Uma vila preservada entre o mar e a floresta.
                 </GlobalTitle>
                 <VilaDescription>
@@ -48,15 +57,28 @@ export default class Vila extends Component {
                 <VilaImageContent>
                   <VilaImage src={VilaImageJPG} alt="" />
                   <VilaTitleContent>
-                    <VilaTitle>Vila de<br />Pescadores</VilaTitle>
+                    <VilaTitle>
+                      Vila de
+                      <br />
+                      Pescadores
+                    </VilaTitle>
                   </VilaTitleContent>
                 </VilaImageContent>
               </VilaCol>
             </VilaRow>
           </Container>
         </VilaContent>
-        {parallax.map(({ id, bg, bdBg, bdColor, bgColor, title, desc })=> (
-          <VilaParallax key={id} id={id} bg={bg} bdBg={bdBg} bdColor={bdColor} bgColor={bgColor} title={title} desc={desc} />
+        {parallax.map(({ id, bg, bdBg, bdColor, bgColor, title, desc }) => (
+          <VilaParallax
+            key={id}
+            id={id}
+            bg={bg}
+            bdBg={bdBg}
+            bdColor={bdColor}
+            bgColor={bgColor}
+            title={title}
+            desc={desc}
+          />
         ))}
         <VilaParallaxEnd />
       </>

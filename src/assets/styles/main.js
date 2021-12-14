@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Layout = styled.div`
+export const Padding = styled.div`
   padding-top: 100px;
   background-color: var(--gray);
 `;

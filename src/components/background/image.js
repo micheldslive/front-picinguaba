@@ -1,17 +1,17 @@
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
 import {
   ImageContainer,
   ImageContent,
   ImageTitle,
 } from "assets/styles/background";
 import { BorderBrushTop } from "assets/styles/bordas";
+import { gsapTopEffect } from "utils/gsapEffect";
 
 const ImageBgTop = ({ background, title }) => {
   const animate = useRef();
 
   useEffect(() => {
-    gsap.fromTo(animate.current, { opacity: 0 }, { opacity: 1, duration: 1 });
+    gsapTopEffect(animate.current);
   });
 
   return (

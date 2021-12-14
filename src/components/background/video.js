@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { gsapTopEffect } from "utils/gsapEffect";
 import {
   Refugio,
   Title,
@@ -14,18 +14,18 @@ const Video = () => {
   const animate = useRef();
 
   useEffect(() => {
-    gsap.fromTo(animate.current, { opacity: 0 }, { opacity: 1, duration: 1 });
+    gsapTopEffect(animate.current);
   });
 
   return (
-    <VideoContainer ref={animate}>
+    <VideoContainer>
       <Title>
         <TitleContent>
           <Refugio />
         </TitleContent>
       </Title>
       <VideoContent>
-        <VideoElement src={VideoSRC} autoPlay muted loop data-object-fit="cover" />
+        <VideoElement ref={animate} src={VideoSRC} autoPlay muted loop data-object-fit="cover" />
       </VideoContent>
     </VideoContainer>
   );

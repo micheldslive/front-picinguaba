@@ -93,11 +93,16 @@ section {
 
 export const Container = styled.section``;
 
+export const GlobalTitleContent = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const GlobalTitle = styled.h1`
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  color: white;
+  color: ${({color}) => (color ? "white" : "var(--darkBlue)")};
   font-family: "Staatliches", cursive;
   gap: 20px;
   font-size: 40px;
