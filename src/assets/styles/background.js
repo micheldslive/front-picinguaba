@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as RefugioSVG } from "../images/refugio.svg";
+import { ReactComponent as RefugioSVG } from "assets/images/refugio.svg";
 
 export const VideoContainer = styled.div`
   margin-bottom: -5px;

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gsapEffect } from "../../utils/gsapEffect";
+import { gsapEffect } from "utils/gsapEffect";
 import {
   VilaParallaxBG,
   VilaParallaxBorder,
@@ -7,7 +7,7 @@ import {
   VilaParallaxContent,
   VilaParallaxDescription,
   VilaParallaxTitle,
-} from "../../assets/styles/home";
+} from "assets/styles/home";
 
 export const VilaParallax = ({ id, bg, bdBg, bdColor, bgColor, title, desc }) => {
 

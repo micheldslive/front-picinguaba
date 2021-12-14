@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap-grid.min.css";
 import styled, { createGlobalStyle } from "styled-components";
-import TitleSVG from "../images/title-wave.svg";
+import TitleSVG from "assets/images/title-wave.svg";
 
 export const GlobalStyles = createGlobalStyle`
 

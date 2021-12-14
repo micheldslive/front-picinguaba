@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { NavLink, Link } from "react-router-dom";
-import { ReactComponent as LogoPicinguaba } from "../images/logo-picinguaba.svg";
-import WaveComp from "../images/wave.svg";
+import { ReactComponent as LogoPicinguaba } from "assets/images/logo-picinguaba.svg";
+import WaveComp from "assets/images/wave.svg";
 
 export const HeaderContent = styled.header`
   position: fixed;

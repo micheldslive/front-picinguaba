@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { gsapEffect } from "../../utils/gsapEffect";
-import ImageBgTop from "../../components/background/image";
-import Background from "../../assets/images/eventos/eventos-bg.jpg";
-import { GlobalTitle, GlobalTitleContent } from "../../assets/styles/global";
+import { gsapEffect } from "utils/gsapEffect";
+import ImageBgTop from "components/background/image";
+import Background from "assets/images/eventos/eventos-bg.jpg";
+import { GlobalTitle, GlobalTitleContent } from "assets/styles/global";
 import {
   EventoCard,
   EventoCol,
@@ -14,8 +14,8 @@ import {
   EventosContainer,
   EventosContent,
   EventoTitle,
-} from "../../assets/styles/eventos";
-import Api from "../Api.js";
+} from "assets/styles/eventos";
+import Api from "services/Api.js";
 
 const Eventos = () => {
   const animate = useRef();

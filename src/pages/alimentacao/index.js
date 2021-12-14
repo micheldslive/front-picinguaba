@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from "react";
+import { gsapEffect } from "utils/gsapEffect";
 import { Helmet } from "react-helmet-async";
-import { gsapEffect } from "../../utils/gsapEffect";
-import ImageBgTop from "../../components/background/image";
-import Background from "../../assets/images/alimentacao/alimentacao-bg.jpg";
-import FoodImage from "../../assets/images/alimentacao/food.webp";
-import IconCard from "../../assets/images/alimentacao/icon.png";
+import ImageBgTop from "components/background/image";
+import Background from "assets/images/alimentacao/alimentacao-bg.jpg";
+import FoodImage from "assets/images/alimentacao/food.webp";
+import IconCard from "assets/images/alimentacao/icon.png";
 import {
   GlobalSubtitle,
   GlobalTitle,
   GlobalTitleContent,
-} from "../../assets/styles/global";
+} from "assets/styles/global";
 import {
   AlCard,
   AlCardContent,
@@ -27,8 +27,8 @@ import {
   AlTitleContent,
   CardBack,
   CardFront,
-} from "../../assets/styles/alimentacao";
-import Api from "../Api.js";
+} from "assets/styles/alimentacao";
+import Api from "services/Api.js";
 
 const Alimentacao = () => {
   const animate = useRef();

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { GlobalStyles } from "./assets/styles/global";
+import { GlobalStyles } from "assets/styles/global";
 
 ReactDOM.render(
   <React.StrictMode>

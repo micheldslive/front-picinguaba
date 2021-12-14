@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import Menu from "../../services/nav-menu.json";
+import Menu from "services/nav-menu.json";
 import {
   Bullets,
   Burger,
@@ -12,7 +12,7 @@ import {
   LogoLink,
   MenuLink,
   Navigation,
-} from "../../assets/styles/header";
+} from "assets/styles/header";
 
 class Hamburger extends Component {
   render() {
