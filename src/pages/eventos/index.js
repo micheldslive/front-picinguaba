@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { gsapEffect } from "utils/gsapEffect";
-import { Api } from "services/api";
+import { api } from "services/api";
 import ImageBgTop from "components/background/image";
 import Background from "assets/images/eventos/eventos-bg.jpg";
 import { GlobalTitle, GlobalTitleContent } from "assets/styles/global";
@@ -23,10 +23,10 @@ const Eventos = () => {
   const category = 1;
 
   useEffect(() => {
-    gsapEffect(animate.current);
-    Api.get(`/produtos/categoria/${category}`).then((res) => {
+    api.get(`/produtos/categoria/${category}`).then((res) => {
       setProdutos(res.data);
     });
+    gsapEffect(animate.current);
   }, [category]);
 
   return (
@@ -51,9 +51,7 @@ const Eventos = () => {
                   <EventoCard>
                     <EventoIMG src={imagem_thumb} alt={nome} />
                     <EventoTitle>{nome}</EventoTitle>
-                    <EventoDesc>
-                      {descricao}
-                    </EventoDesc>
+                    <EventoDesc>{descricao}</EventoDesc>
                   </EventoCard>
                 </EventoLink>
               </EventoCol>
