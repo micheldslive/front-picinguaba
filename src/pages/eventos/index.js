@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { gsapEffect } from "utils/gsapEffect";
-import { api } from "services/api";
+import { api } from "../../services/api";
 import ImageBgTop from "components/background/image";
 import Background from "assets/images/eventos/eventos-bg.jpg";
 import { GlobalTitle, GlobalTitleContent } from "assets/styles/global";
