@@ -1,5 +1,7 @@
 import axios from "axios";
 
-export const Api = axios.create({
+const Api = axios.create({
   baseURL: "https://api-picinguaba.herokuapp.com/v1",
 });
+
+export default Api;

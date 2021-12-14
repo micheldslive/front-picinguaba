@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { gsapEffect } from "../../utils/gsapEffect";
-import { Api } from "../../services/Api";
 import ImageBgTop from "../../components/background/image";
 import Background from "../../assets/images/alimentacao/alimentacao-bg.jpg";
 import FoodImage from "../../assets/images/alimentacao/food.webp";
@@ -29,6 +28,7 @@ import {
   CardBack,
   CardFront,
 } from "../../assets/styles/alimentacao";
+import Api from "../Api.js";
 
 const Alimentacao = () => {
   const animate = useRef();
