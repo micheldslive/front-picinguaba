@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from "react";
-import { gsapEffect } from "utils/gsapEffect";
 import { Helmet } from "react-helmet-async";
-import { api } from "../../services/api";
-import ImageBgTop from "components/background/image";
-import Background from "assets/images/alimentacao/alimentacao-bg.jpg";
-import FoodImage from "assets/images/alimentacao/food.webp";
-import IconCard from "assets/images/alimentacao/icon.png";
+import { gsapEffect } from "../../utils/gsapEffect";
+import { Api } from "../../services/Api";
+import ImageBgTop from "../../components/background/image";
+import Background from "../../assets/images/alimentacao/alimentacao-bg.jpg";
+import FoodImage from "../../assets/images/alimentacao/food.webp";
+import IconCard from "../../assets/images/alimentacao/icon.png";
 import {
   GlobalSubtitle,
   GlobalTitle,
   GlobalTitleContent,
-} from "assets/styles/global";
+} from "../../assets/styles/global";
 import {
   AlCard,
   AlCardContent,
@@ -28,7 +28,7 @@ import {
   AlTitleContent,
   CardBack,
   CardFront,
-} from "assets/styles/alimentacao";
+} from "../../assets/styles/alimentacao";
 
 const Alimentacao = () => {
   const animate = useRef();
@@ -36,7 +36,7 @@ const Alimentacao = () => {
   const category = 3;
 
   useEffect(() => {
-    api.get(`/produtos/categoria/${category}`).then((res) => {
+    Api.get(`/produtos/categoria/${category}`).then((res) => {
       setProdutos(res.data);
     });
     gsapEffect(animate.current);

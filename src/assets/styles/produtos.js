@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Texture from "assets/images/home/home-texture.png";
+import Texture from "../images/home/home-texture.png";
 
 export { Texture };
 

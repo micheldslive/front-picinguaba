@@ -1,5 +1,5 @@
-import NavMenu from "services/nav-menu.json";
-import { Container } from "assets/styles/global";
+import NavMenu from "../../services/nav-menu.json";
+import { Container } from "../../assets/styles/global";
 import {
   FooterContent,
   FooterRow,
@@ -21,7 +21,7 @@ import {
   Linkedin,
   Youtube,
   LogoPicinguabaIMG,
-} from "assets/styles/footer";
+} from "../../assets/styles/footer";
 
 const Footer = () => {
   

@@ -3,7 +3,7 @@ import {
   PreloaderMain,
   PreloaderContainer,
   PicinguabaSun,
-} from "assets/styles/preloader";
+} from "../../assets/styles/preloader";
 
 export default class Preloader extends Component {
   render() {

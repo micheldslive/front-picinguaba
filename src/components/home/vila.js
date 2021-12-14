@@ -1,5 +1,8 @@
 import { Component, createRef } from "react";
-import { GlobalTitle } from "assets/styles/global";
+import { VilaParallax } from "./parallax";
+import { parallax } from "../../services/home";
+import { gsapEffect } from "../../utils/gsapEffect";
+import { GlobalTitle } from "../../assets/styles/global";
 import {
   Container,
   VilaContent,
@@ -12,10 +15,7 @@ import {
   VilaTitleContent,
   VilaTitle,
   VilaParallaxEnd,
-} from "assets/styles/home";
-import { VilaParallax } from "./parallax";
-import { parallax } from "services/home";
-import { gsapEffect } from "utils/gsapEffect";
+} from "../../assets/styles/home";
 
 export default class Vila extends Component {
   constructor(props) {

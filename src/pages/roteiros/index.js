@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet-async";
-import ImageBgTop from "components/background/image";
-import Background from "assets/images/roteiros/roteiros-bg.jpg";
+import ImageBgTop from "../../components/background/image";
+import Background from "../../assets/images/roteiros/roteiros-bg.jpg";
 import {
   RoteiroCard,
   RoteiroCol,
@@ -10,8 +10,8 @@ import {
   RoteiroRow,
   RoteirosContent,
   RoteiroTitle,
-} from "assets/styles/roteiros";
-import { Container } from "assets/styles/global";
+} from "../../assets/styles/roteiros";
+import { Container } from "../../assets/styles/global";
 
 export default class Roteiros extends Component {
   render() {

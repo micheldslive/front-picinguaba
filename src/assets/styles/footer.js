@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
-import { ReactComponent as FaceSVG } from "assets/images/facebook.svg";
-import { ReactComponent as InstaSVG } from "assets/images/instagram.svg";
-import { ReactComponent as LinkedSVG } from "assets/images/linkedin.svg";
-import { ReactComponent as YouTubeSVG } from "assets/images/youtube.svg";
-import LogoSVG from "assets/images/logo-picinguaba-white.webp";
+import { ReactComponent as FaceSVG } from "../images/facebook.svg";
+import { ReactComponent as InstaSVG } from "../images/instagram.svg";
+import { ReactComponent as LinkedSVG } from "../images/linkedin.svg";
+import { ReactComponent as YouTubeSVG } from "../images/youtube.svg";
+import LogoSVG from "../images/logo-picinguaba-white.webp";
 
 export { LogoSVG };
 

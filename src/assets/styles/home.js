@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
-import VilaImageJPG from "assets/images/home/pescador-rede.jpg";
+import VilaImageJPG from "../images/home/pescador-rede.jpg";
 
 export { VilaImageJPG };
 

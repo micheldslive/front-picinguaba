@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet-async";
-import Video from "components/background/video";
-import Produtos from "components/produtos";
-import Vila from "components/home/vila";
+import Video from "../../components/background/video";
+import Produtos from "../../components/produtos";
+import Vila from "../../components/home/vila";
 
 export default class Home extends Component {
   render() {

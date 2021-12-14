@@ -3,9 +3,9 @@ import {
   ImageContainer,
   ImageContent,
   ImageTitle,
-} from "assets/styles/background";
-import { BorderBrushTop } from "assets/styles/bordas";
-import { gsapTopEffect } from "utils/gsapEffect";
+} from "../../assets/styles/background";
+import { BorderBrushTop } from "../../assets/styles/bordas";
+import { gsapTopEffect } from "../../utils/gsapEffect";
 
 const ImageBgTop = ({ background, title }) => {
   const animate = useRef();

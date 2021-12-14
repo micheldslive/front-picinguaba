@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as PicinguabaSVG } from "assets/images/picinguaba-sun.svg";
+import { ReactComponent as PicinguabaSVG } from "../images/picinguaba-sun.svg";
 
 export const PreloaderContent = styled.div``;
 

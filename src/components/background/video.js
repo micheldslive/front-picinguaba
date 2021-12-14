@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gsapTopEffect } from "utils/gsapEffect";
+import { gsapTopEffect } from "../../utils/gsapEffect";
 import {
   Refugio,
   Title,
@@ -7,8 +7,8 @@ import {
   VideoContainer,
   VideoContent,
   VideoElement,
-} from "assets/styles/background";
-import VideoSRC from "assets/video/video-picinguaba.mp4";
+} from "../../assets/styles/background";
+import VideoSRC from "../../assets/video/video-picinguaba.mp4";
 
 const Video = () => {
   const animate = useRef();

@@ -1,9 +1,9 @@
-import Sport from "assets/images/home/picinguaba-stand-up-sport.jpg";
-import Ocean from "assets/images/home/picinguaba-mar-barcos.jpg";
-import Nature from "assets/images/home/picinguaba-barco-natureza.jpg";
-import Wave1 from "assets/images/home/waves-1.png";
-import Wave2 from "assets/images/home/waves-2.png";
-import Wave3 from "assets/images/home/waves-3.png";
+import Sport from "../assets/images/home/picinguaba-stand-up-sport.jpg";
+import Ocean from "../assets/images/home/picinguaba-mar-barcos.jpg";
+import Nature from "../assets/images/home/picinguaba-barco-natureza.jpg";
+import Wave1 from "../assets/images/home/waves-1.png";
+import Wave2 from "../assets/images/home/waves-2.png";
+import Wave3 from "../assets/images/home/waves-3.png";
 
 export const parallax = [
   {

@@ -6,7 +6,7 @@ import {
   Error,
   ErrorText,
   Link,
-} from "assets/styles/404";
+} from "../../assets/styles/404";
 
 export default class NotFound extends Component {
   render() {

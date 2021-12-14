@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet-async";
-import ImageBgTop from "components/background/image";
-import Background from "assets/images/acomodacao/acomodacao-bg.jpg";
+import ImageBgTop from "../../components/background/image";
+import Background from "../../assets/images/acomodacao/acomodacao-bg.jpg";
 import {
   Container,
   GlobalTitle,
   GlobalTitleContent,
-} from "assets/styles/global";
-import { AcomContent } from "assets/styles/acomodacao";
+} from "../../assets/styles/global";
+import { AcomContent } from "../../assets/styles/acomodacao";
 
 const Acomodacao = () => {
   return (

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import BgTexture from "assets/images/alimentacao/bg-texture.png";
+import BgTexture from "../images/alimentacao/bg-texture.png";
 
 export const AlContent = styled.div`
   padding: 4em 0;

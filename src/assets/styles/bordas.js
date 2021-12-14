@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import TextureTopImage from "assets/images/brush-div-top.png";
-import TextureBottomImage from "assets/images/brush-div-bottom.png";
+import TextureTopImage from "../images/brush-div-top.png";
+import TextureBottomImage from "../images/brush-div-bottom.png";
 
 export const BorderBrushTop = styled.div`
   height: 48px;
