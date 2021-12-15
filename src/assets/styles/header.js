@@ -10,11 +10,11 @@ export const HeaderContent = styled.header`
   background-color: white;
   border-bottom: ${({ sticky }) => (sticky ? "1px solid #ddd" : "")};;
   transition: all 0.1s linear;
-  z-index: 1;
+  z-index: 2;
   background-color: var(--gray);
 `;
 
-export const Container = styled.section`
+export const HeaderContainer = styled.section`
   transition: 300ms;
   height: ${({ sticky }) => (sticky ? "75px" : "100px")};
   display: flex;
@@ -181,11 +181,11 @@ export const Burger = styled.button`
       transform-origin: 1px;
 
       :nth-child(1) {
-        transform: ${({ open }) => (open ? "rotate(35deg)" : "rotate(0)")};
+        transform: ${({ open }) => (open ? "rotate(30deg)" : "rotate(0)")};
       }
 
       :nth-child(2) {
-        transform: ${({ open }) => (open ? "rotate(-35deg)" : "rotate(0)")};
+        transform: ${({ open }) => (open ? "rotate(-30deg)" : "rotate(0)")};
       }
     }
   }

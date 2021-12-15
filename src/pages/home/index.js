@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 import Video from "components/background/video";
 import Produtos from "components/produtos";
 import Vila from "components/home/vila";
+import Contato from "components/home/contato";
+import Mapa from "utils/map";
 
 export default class Home extends Component {
   render() {
@@ -15,6 +17,8 @@ export default class Home extends Component {
         <Video />
         <Produtos />
         <Vila />
+        <Contato />
+        <Mapa />
       </>
     );
   }

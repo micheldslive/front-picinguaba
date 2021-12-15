@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { gsapEffect } from "utils/gsapEffect";
+import { gsapFadeMove } from "utils/gsapEffect";
 import ImageBgTop from "components/background/image";
 import Background from "assets/images/eventos/eventos-bg.jpg";
 import { GlobalTitle, GlobalTitleContent } from "assets/styles/global";
@@ -18,16 +18,16 @@ import {
 import Api from "services/Api.js";
 
 const Eventos = () => {
-  const animate = useRef();
-  const [produtos, setProdutos] = useState([]);
-  const category = 1;
+  const animate = useRef(),
+    [produtos, setProdutos] = useState([]),
+    category = 1;
 
   useEffect(() => {
     Api.get(`/produtos/categoria/${category}`).then((res) => {
       setProdutos(res.data);
     });
-    gsapEffect(animate.current);
-  }, [category]);
+    gsapFadeMove(animate.current);
+  }, [category, animate]);
 
   return (
     <>

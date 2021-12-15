@@ -128,11 +128,13 @@ export const GlobalSubtitle = styled.p`
 
 export const Iframe = styled.iframe`
   width: 100%;
-  height: 570px;
+  height: 600px;
   margin-bottom: -130px;
   transition: 300ms;
+  filter: grayscale(100%) contrast(100%);
+  position: relative;
 
   @media (max-width: 800px) {
-    height: 450px;
+    height: 470px;
   }
 `;

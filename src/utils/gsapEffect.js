@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export const gsapEffect = (element) => {
+export const gsapFadeMove = (element) => {
   const animate = gsap.fromTo(
     element,
     { opacity: 0, y: 50 },
@@ -16,7 +16,7 @@ export const gsapEffect = (element) => {
   });
 };
 
-export const gsapTopEffect = (element) => {
+export const gsapFadeTop = (element) => {
   const animate = gsap.fromTo(
     element,
     { opacity: 0 },
@@ -30,9 +30,23 @@ export const gsapTopEffect = (element) => {
   });
 };
 
-export const gsapMoveEffect = (element) => {
+export const gsapMoveLeft = (element) => {
   const animate = gsap.to(element, {
-    xPercent: -150,
+    xPercent: -50,
+    ease: "none",
+  });
+  ScrollTrigger.create({
+    trigger: element,
+    animation: animate,
+    start: "top top-=200",
+    end: "top top+=300",
+    scrub: 1
+  });
+};
+
+export const gsapMoveRight = (element) => {
+  const animate = gsap.to(element, {
+    xPercent: -100,
     ease: "none",
   });
   ScrollTrigger.create({

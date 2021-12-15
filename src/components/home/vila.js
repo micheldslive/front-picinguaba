@@ -15,7 +15,7 @@ import {
 } from "assets/styles/home";
 import { VilaParallax } from "./parallax";
 import { parallax } from "services/home";
-import { gsapEffect } from "utils/gsapEffect";
+import { gsapFadeMove } from "utils/gsapEffect";
 
 export default class Vila extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ export default class Vila extends Component {
   }
 
   componentDidMount() {
-    gsapEffect(this.animate.current);
+    gsapFadeMove(this.animate.current);
   }
   render() {
     return (

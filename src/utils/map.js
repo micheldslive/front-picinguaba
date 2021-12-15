@@ -9,7 +9,7 @@ const Mapa = () => {
       loading="lazy"
       aria-hidden="false"
       tabindex="0"
-    ></Iframe>
+    />
   );
 };
 

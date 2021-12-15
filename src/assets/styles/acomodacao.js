@@ -3,6 +3,7 @@ import { Container } from "assets/styles/global";
 import BgTexture from "assets/images/acomodacao/bg-texture.png";
 import Fish from "assets/images/acomodacao/fish.png";
 import Net from "assets/images/acomodacao/net.png";
+import { Link } from "react-router-dom";
 
 export { Fish, Net };
 
@@ -14,11 +15,16 @@ export const AcomContent = styled.div`
   position: relative;
 `;
 
+export const AcomContainer = styled(Container)`
+  max-width: 900px;
+`;
+
 export const AcomCard = styled.div`
   display: flex;
   align-items: center;
   gap: 45px;
   padding-bottom: 55px;
+  transition: 300ms;
 
   @media (max-width: 700px) {
     flex-direction: column;
@@ -27,8 +33,10 @@ export const AcomCard = styled.div`
   }
 `;
 
-export const AcomContainer = styled(Container)`
-  max-width: 900px;
+export const AcomCardLink = styled(Link)`
+  &:hover ${AcomCard} {
+    transform: scale(1.05);
+  }
 `;
 
 export const AcomIMG = styled.img`

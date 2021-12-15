@@ -16,6 +16,9 @@ export const HomeCol = styled(Col)`
   margin-bottom: 35px;
 `;
 
+
+// VILA - COMPONENT HOME PAGE
+
 export const VilaContent = styled.div`
   padding: 8em 0;
   background-color: var(--darkBlue);

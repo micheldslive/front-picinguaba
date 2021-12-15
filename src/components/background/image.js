@@ -1,17 +1,17 @@
 import { useEffect, useRef } from "react";
+import { gsapFadeTop } from "utils/gsapEffect";
+import { BorderBrushTop } from "assets/styles/bordas";
 import {
   ImageContainer,
   ImageContent,
   ImageTitle,
 } from "assets/styles/background";
-import { BorderBrushTop } from "assets/styles/bordas";
-import { gsapTopEffect } from "utils/gsapEffect";
 
 const ImageBgTop = ({ background, title }) => {
   const animate = useRef();
 
   useEffect(() => {
-    gsapTopEffect(animate.current);
+    gsapFadeTop(animate.current);
   });
 
   return (

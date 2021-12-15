@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { gsapEffect, gsapMoveEffect } from "utils/gsapEffect";
+import { gsapFadeMove, gsapMoveLeft, gsapMoveRight } from "utils/gsapEffect";
 import ImageBgTop from "components/background/image";
 import Background from "assets/images/acomodacao/acomodacao-bg.jpg";
 import {
@@ -10,6 +10,7 @@ import {
 } from "assets/styles/global";
 import {
   AcomContainer,
+  AcomCardLink,
   AcomCard,
   AcomContent,
   AcomDesc,
@@ -34,9 +35,9 @@ const Acomodacao = () => {
     Api.get(`/produtos/categoria/${category}`).then((res) => {
       setProdutos(res.data);
     });
-    gsapEffect(animate.current);
-    gsapMoveEffect(moveFish.current);
-    gsapMoveEffect(moveNet.current);
+    gsapFadeMove(animate.current);
+    gsapMoveRight(moveFish.current);
+    gsapMoveLeft(moveNet.current);
   }, [category]);
   return (
     <>
@@ -60,13 +61,15 @@ const Acomodacao = () => {
         <AcomNet src={Net} alt="" ref={moveNet} />
         <AcomContainer ref={animate}>
           {produtos?.map(({ id, imagem_thumb, nome, descricao }) => (
-            <AcomCard key={id}>
+            <AcomCardLink key={id} to={`/detalhes/${id}`}>
+            <AcomCard>
               <AcomIMG src={imagem_thumb} alt={nome} />
               <AcomInfo>
                 <AcomTitle>{nome}</AcomTitle>
                 <AcomDesc>{descricao}</AcomDesc>
               </AcomInfo>
             </AcomCard>
+            </AcomCardLink>
           ))}
         </AcomContainer>
       </AcomContent>

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-import { gsapTopEffect } from "utils/gsapEffect";
+import { gsapFadeTop } from "utils/gsapEffect";
+import VideoSRC from "assets/video/video-picinguaba.mp4";
 import {
   Refugio,
   Title,
@@ -8,13 +9,12 @@ import {
   VideoContent,
   VideoElement,
 } from "assets/styles/background";
-import VideoSRC from "assets/video/video-picinguaba.mp4";
 
 const Video = () => {
   const animate = useRef();
 
   useEffect(() => {
-    gsapTopEffect(animate.current);
+    gsapFadeTop(animate.current);
   });
 
   return (

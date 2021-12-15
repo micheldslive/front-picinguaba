@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { gsapEffect } from "utils/gsapEffect";
+import { gsapFadeMove } from "utils/gsapEffect";
 import { Helmet } from "react-helmet-async";
 import ImageBgTop from "components/background/image";
 import Background from "assets/images/alimentacao/alimentacao-bg.jpg";
@@ -39,7 +39,7 @@ const Alimentacao = () => {
     Api.get(`/produtos/categoria/${category}`).then((res) => {
       setProdutos(res.data);
     });
-    gsapEffect(animate.current);
+    gsapFadeMove(animate.current);
   }, [category]);
 
   return (

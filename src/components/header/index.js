@@ -4,7 +4,7 @@ import Menu from "services/nav-menu.json";
 import {
   Bullets,
   Burger,
-  Container,
+  HeaderContainer,
   HeaderContent,
   List,
   ListContainer,
@@ -53,7 +53,7 @@ export default class Header extends Component {
     
     return (
       <HeaderContent open={open} sticky={this.state.sticky}>
-        <Container sticky={this.state.sticky}>
+        <HeaderContainer sticky={this.state.sticky}>
           <LogoLink to="/">
             <Logo />
           </LogoLink>
@@ -67,7 +67,7 @@ export default class Header extends Component {
             </ListContainer>
           </Navigation>
           <Hamburger open={open} openClick={this.openClick} />
-        </Container>
+        </HeaderContainer>
       </HeaderContent>
     );
   }

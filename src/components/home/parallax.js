@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gsapEffect } from "utils/gsapEffect";
+import { gsapFadeMove } from "utils/gsapEffect";
 import {
   VilaParallaxBG,
   VilaParallaxBorder,
@@ -14,8 +14,8 @@ export const VilaParallax = ({ id, bg, bdBg, bdColor, bgColor, title, desc }) =>
   const animate = useRef();
 
   useEffect(() => {
-    gsapEffect(animate.current);
-  }, []);
+    gsapFadeMove(animate.current);
+  }, [animate]);
   
   return (
     <>
