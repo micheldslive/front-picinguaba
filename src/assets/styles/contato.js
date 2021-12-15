@@ -26,7 +26,7 @@ export const Form = styled.form`
 `;
 
 export const Input = styled.input`
-  border: 1px solid #f1f1f1;
+  border: 1px solid var(--gray2);
   padding: 15px;
   margin: 0 0 15px;
   width: calc(100% - 30px);
@@ -34,7 +34,7 @@ export const Input = styled.input`
   background-color: var(--gray);
 `;
 export const Textarea = styled.textarea`
-  border: 1px solid #f1f1f1;
+  border: 1px solid var(--gray2);
   padding: 15px;
   margin: 0 0 15px;
   width: calc(100% - 30px);

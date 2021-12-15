@@ -1,10 +1,18 @@
 import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 import DetailBG from "assets/images/detalhes/detalhes.png";
+import BgTexture from "assets/images/home/home-texture.png";
 
-export const DetailContent = styled.div``;
+export const DetailContent = styled.div`
+  padding: 4em 0;
+  background: url(${BgTexture}) no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+`;
 
-export const DetailRow = styled(Row)``;
+export const DetailRow = styled(Row)`
+`;
 
 export const DetailCol = styled(Col)``;
 

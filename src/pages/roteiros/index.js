@@ -1,19 +1,39 @@
 import { Helmet } from "react-helmet-async";
+import { useEffect, useRef, useState } from "react";
+import { gsapFadeMove } from "utils/gsapEffect";
+import Api from "services/Api";
 import ImageBgTop from "components/background/image";
 import Background from "assets/images/roteiros/roteiros-bg.jpg";
 import {
   RoteiroCard,
-  RoteiroCol,
-  RoteiroDesc,
-  RoteiroIMG,
-  RoteiroRow,
+  CardDesc,
+  CardIMG,
+  CardNumber,
   RoteirosContent,
-  RoteiroTitle,
+  CardTitle,
+  Number,
+  CardContent,
+  CardInfo,
 } from "assets/styles/roteiros";
-import { Container } from "assets/styles/global";
+import {
+  Container,
+  GlobalTitle,
+  GlobalTitleContent,
+} from "assets/styles/global";
 import Mapa from "utils/map";
 
 const Roteiros = () => {
+  const animate = useRef(),
+    [produtos, setProdutos] = useState([]),
+    category = 2;
+
+  useEffect(() => {
+    Api.get(`/produtos/categoria/${category}`).then((res) => {
+      setProdutos(res.data);
+    });
+    gsapFadeMove(animate.current);
+  }, [category, animate]);
+
   return (
     <>
       <Helmet>
@@ -24,20 +44,28 @@ const Roteiros = () => {
         />
       </Helmet>
       <ImageBgTop background={Background} title={"Roteiros"} />
+      <GlobalTitleContent>
+        <GlobalTitle color={0}>Planejamento Diário</GlobalTitle>
+      </GlobalTitleContent>
       <RoteirosContent>
-        <Container>
-          <RoteiroRow>
-            <RoteiroCol lg={6} md={12}>
-              <RoteiroCard>
-                <RoteiroIMG src="" alt="" />
-                <RoteiroTitle></RoteiroTitle>
-                <RoteiroDesc></RoteiroDesc>
-              </RoteiroCard>
-            </RoteiroCol>
-          </RoteiroRow>
+        <Container ref={animate}>
+          {produtos?.map(({ id, nome, imagem_thumb, descricao }, index) => (
+            <RoteiroCard key={id} to={`/detalhes/${id}`}>
+              <CardContent>
+                <CardIMG src={imagem_thumb} alt={nome} />
+                <CardInfo>
+                  <CardTitle>{nome}</CardTitle>
+                  <CardDesc>{descricao}</CardDesc>
+                </CardInfo>
+              </CardContent>
+              <CardNumber>
+                <Number>0{index + 1}</Number>
+              </CardNumber>
+            </RoteiroCard>
+          ))}
         </Container>
-        <Mapa />
       </RoteirosContent>
+      <Mapa />
     </>
   );
 };

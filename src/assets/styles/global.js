@@ -9,7 +9,8 @@ export const GlobalStyles = createGlobalStyle`
 :root {
   --gray: #F7F6F2;
   --gray2: #F1F1F1;
-  --gray3: #ccc;
+  --gray3: #EEEEEE;
+  --gray4: #555;
   --darkBlue: #133754;
   --blue: #0194C6;
   --blue1: #2EC6EF;
@@ -19,9 +20,6 @@ export const GlobalStyles = createGlobalStyle`
   --orange3: #ea914b;
   --green: #51734B;
   --green1: #75BD81;
-  --black: #191919;
-  --black1: #222222;
-  --black2: #a2a2a2;
 }
 
 body,
@@ -110,6 +108,7 @@ export const GlobalTitle = styled.h1`
   gap: 20px;
   font-size: 40px;
   font-weight: 100;
+  transition: 300ms;
 
   &::before {
     content: "";
@@ -117,6 +116,16 @@ export const GlobalTitle = styled.h1`
     width: 100px;
     height: 13px;
     background-repeat: no-repeat;
+  }
+
+  @media (max-width: 560px) {
+    font-size: 25px;
+
+    &::before {
+      content: "";
+      width: 60px;
+      height: 9px;
+    }
   }
 `;
 

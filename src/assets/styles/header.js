@@ -181,11 +181,11 @@ export const Burger = styled.button`
       transform-origin: 1px;
 
       :nth-child(1) {
-        transform: ${({ open }) => (open ? "rotate(30deg)" : "rotate(0)")};
+        transform: ${({ open }) => (open ? "rotate(34deg)" : "rotate(0)")};
       }
 
       :nth-child(2) {
-        transform: ${({ open }) => (open ? "rotate(-30deg)" : "rotate(0)")};
+        transform: ${({ open }) => (open ? "rotate(-34deg)" : "rotate(0)")};
       }
     }
   }

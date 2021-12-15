@@ -1,16 +1,184 @@
-import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
+import BgTexture from "assets/images/roteiros/bg-texture.png";
+import LineLeft from "assets/images/roteiros/line-left.png";
+import LineRight from "assets/images/roteiros/line-right.png";
+import { Link } from "react-router-dom";
 
-export const RoteirosContent = styled.div``;
+export const RoteirosContent = styled.div`
+  padding: 4em 0;
+  background: url(${BgTexture}) no-repeat;
+  background-position: center;
+`;
 
-export const RoteiroRow = styled(Row)``;
+export const CardIMG = styled.img`
+  height: 100%;
+  width: 100%;
+  max-width: 290px;
+  transition: 300ms;
 
-export const RoteiroCol = styled(Col)``;
+  @media (max-width: 1180px) {
+    width: 150px;
+    height: 150px;
+  }
+`;
 
-export const RoteiroCard = styled.div``;
+export const CardInfo = styled.div``;
 
-export const RoteiroIMG = styled.img``;
+export const CardNumber = styled.div`
+  position: absolute;
+  width: 25%;
+  text-align: center;
 
-export const RoteiroTitle = styled.h1``;
+  @media (max-width: 770px) {
+    display: none;
+  }
+`;
 
-export const RoteiroDesc = styled.p``;
+export const CardContent = styled.div`
+  position: relative;
+  transition: opacity 0.5s;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  transition: 300ms;
+
+  @media (max-width: 560px) {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
+export const CardTitle = styled.h1`
+  text-transform: uppercase;
+  color: var(--darkBlue);
+  font-family: "Staatliches", cursive;
+  font-size: 35px;
+  font-weight: 100;
+  transition: 300ms;
+
+  @media (max-width: 1180px) {
+    font-size: 25px;
+  }
+`;
+
+export const CardDesc = styled.p`
+  color: var(--gray4);
+`;
+
+export const Number = styled.h1`
+  font-family: "Sue Ellen Francisco", cursive;
+  color: var(--gray3);
+  font-size: 170px;
+  transition: 300ms;
+
+  @media (max-width: 1180px) {
+    font-size: 120px;
+    line-height: 150px;
+  }
+`;
+
+export const RoteiroCard = styled(Link)`
+  padding-bottom: 55px;
+  display: flex;
+  position: relative;
+
+  &:nth-child(1) ${CardNumber}, &:nth-child(3) ${CardNumber} {
+    left: 0;
+  }
+
+  &:nth-child(2) ${CardNumber}, &:nth-child(4) ${CardNumber} {
+    right: 0;
+  }
+
+  @media (min-width: 1180px) {
+    &:nth-child(1) ${CardContent}::before, &:nth-child(3) ${CardContent}::before {
+      content: "";
+      background: url(${LineLeft});
+      left: 600px;
+      bottom: -76px;
+      height: 162px;
+      width: 52px;
+      position: absolute;
+      transform: rotate(-25deg);
+      transition: 300ms;
+
+      @media (min-width: 1181px) and (max-width: 1280px) {
+        left: 570px;
+      }
+    }
+
+    &:nth-child(2) ${CardContent}::before {
+      content: "";
+      background: url(${LineRight});
+      left: 510px;
+      bottom: -76px;
+      height: 162px;
+      width: 52px;
+      position: absolute;
+      transform: rotate(25deg);
+      transition: 300ms;
+
+      @media (min-width: 1280px) and (max-width: 1336px) {
+        left: 460px;
+      }
+
+      @media (min-width: 1180px) and (max-width: 1279px) {
+        left: 415px;
+      }
+    }
+  }
+
+
+  @media (min-width: 770px) {
+    &:nth-child(1) ${CardContent}, &:nth-child(3) ${CardContent} {
+      padding-left: 25%;
+    }
+
+    &:nth-child(2) ${CardContent}, &:nth-child(4) ${CardContent} {
+      padding-right: 25%;
+    }
+  }
+
+  @media (min-width: 561px) {
+    &:nth-child(1)
+      ${CardIMG},
+      &:nth-child(3)
+      ${CardIMG},
+      &:nth-child(2)
+      ${CardInfo},
+      &:nth-child(4)
+      ${CardInfo} {
+      order: 1;
+    }
+
+    &:nth-child(2)
+      ${CardIMG},
+      &:nth-child(4)
+      ${CardIMG},
+      &:nth-child(1)
+      ${CardInfo},
+      &:nth-child(3)
+      ${CardInfo} {
+      order: 2;
+    }
+  }
+
+  &:hover ${Number}, &:hover ${CardTitle} {
+    color: var(--orange);
+  }
+
+  &:hover ${CardIMG} {
+    animation-name: rotateCard;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+  }
+
+  @keyframes rotateCard {
+    from {
+      transform: rotate3d(0, 1, 0, 120deg);
+    }
+    to {
+      transform: rotate3d(0, 1, 0, 0deg);
+    }
+  }
+`;
