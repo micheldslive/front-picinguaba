@@ -33,7 +33,7 @@ export default class Vila extends Component {
           <Container>
             <VilaRow ref={this.animate}>
               <VilaCol lg={6} md={12}>
-                <GlobalTitle color={true}>
+                <GlobalTitle color={1}>
                   Uma vila preservada entre o mar e a floresta.
                 </GlobalTitle>
                 <VilaDescription>

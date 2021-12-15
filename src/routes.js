@@ -5,7 +5,7 @@ import Alimentacao from "pages/alimentacao";
 import Acomodacao from "pages/acomodacao";
 import Roteiros from "pages/roteiros";
 import Eventos from "pages/eventos";
-//import Detalhes from "pages/detalhes";
+import Detalhes from "pages/detalhes";
 import NotFound from "pages/404";
 
 export default class Routers extends Component {
@@ -17,7 +17,7 @@ export default class Routers extends Component {
         <Route exact path="/acomodacao" element={<Acomodacao />} />
         <Route exact path="/roteiros" element={<Roteiros />} />
         <Route exact path="/eventos" element={<Eventos />} />
-        {/* <Route exact path="/detalhes/:id" element={<Detalhes />} /> */}
+        <Route exact path="/detalhes/:id" element={<Detalhes />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     );

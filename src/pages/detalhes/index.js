@@ -1,45 +1,60 @@
-//import { useEffect, useState } from "react";
-//import { useParams } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
-//import { api } from "services/api";
-
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import Background from "assets/images/detalhes/detalhes-bg.jpg";
+import ImageBgTop from "components/background/image";
+import { Container, GlobalTitle } from "assets/styles/global";
+import {
+  DetailCategory,
+  DetailCol,
+  DetailContent,
+  DetailDesc,
+  DetailImg,
+  DetailImgContent,
+  DetailInfos,
+  DetailRow,
+  DetailTitle,
+} from "assets/styles/detalhes";
+import Api from "services/Api.js";
 
 const Detalhes = () => {
-//   const [produtos, setProdutos] = useState();
-//   const params = useParams();
+  const [produto, setProduto] = useState();
+  const params = useParams();
 
-//   useEffect(() => {
-//     api.get(`produtos/${params.id}`).then((res) => {
-//       setProdutos(res.data[0]);
-//     });
-//   }, [params]);
+  useEffect(() => {
+    Api.get(`produtos/${params.id}`).then((res) => {
+      setProduto(res.data[0]);
+    });
+  }, [params]);
 
+  console.log(produto);
   return (
-    <div className="DetalhesContent">
-      <Container className="DetalhesContainer">
-        <Row>
-          <Col className="col-lg-6 col-md-6 col-12">
-            <div className="CardContainer">
-              <div className="CardImagem">
-                {/* <img src={produtos?.imagem} alt="imagem-1" /> */}
-              </div>
-            </div>
-          </Col>
-          <Col className="col-lg-6 col-md-6 col-12">
-            {/* <div className="CardContent">
-              <p className="Titulo">{produtos.nome}</p>
-              <p className="Valor">R$ {produtos.preco}</p>
-              <p className="Parcelas">{produtos.parcela}</p>
-              <p><strong>Detalhes:</strong><br />{produtos.detalhes}</p>
-              <p>{produtos.encomenda}<br />{produtos.dias_producao}</p>
-              <p><strong>Categoria:</strong> {produtos.categoria}</p>
-              <a href="/" className="btn btn-primary mb-4">Comprar este produto</a>
-              <input type="text" placeholder="Digite seu CEP" />
-            </div> */}
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <>
+      <Helmet>
+        <title>Vila Picinguaba - Detalhes</title>
+        <meta name="description" content="Uma vila de pescadores preservada entre o mar e a floresta." />
+      </Helmet>
+      <ImageBgTop background={Background} title={produto?.nome} />
+      <DetailContent>
+        <Container>
+          <DetailRow>
+            <DetailCol lg={6} md={6}>
+              <DetailImgContent>
+                <DetailImg src={produto?.imagem} alt={produto?.nome} />
+              </DetailImgContent>
+            </DetailCol>
+            <DetailCol lg={6} md={6}>
+              <DetailInfos>
+                <GlobalTitle>{produto?.nome}</GlobalTitle>
+                <DetailTitle></DetailTitle>
+                <DetailDesc>{produto?.descricao}</DetailDesc>
+                <DetailCategory>{produto?.nome_categoria}</DetailCategory>
+              </DetailInfos>
+            </DetailCol>
+          </DetailRow>
+        </Container>
+      </DetailContent>
+    </>
   );
 };
 

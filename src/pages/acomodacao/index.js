@@ -19,7 +19,7 @@ const Acomodacao = () => {
       <AcomContent>
         <Container>
           <GlobalTitleContent>
-            <GlobalTitle color={false}>Acomodações</GlobalTitle>
+            <GlobalTitle color={0}>Acomodações</GlobalTitle>
           </GlobalTitleContent>
         </Container>
       </AcomContent>

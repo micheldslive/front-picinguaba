@@ -40,7 +40,7 @@ const Eventos = () => {
       </Helmet>
       <ImageBgTop background={Background} title={"Eventos"} />
       <GlobalTitleContent>
-        <GlobalTitle color={false}>Eventos</GlobalTitle>
+        <GlobalTitle color={0}>Eventos</GlobalTitle>
       </GlobalTitleContent>
       <EventosContent>
         <EventosContainer>
