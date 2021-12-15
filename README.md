@@ -1,5 +1,5 @@
 <p align="center">	
-  <img src="https://github.com/micheldslive/front-picinguaba/blob/master/src/assets/images/logo-picinguaba.svg" width="230" alt="Nubank" />
+  <img src="https://github.com/micheldslive/front-picinguaba/blob/master/src/assets/images/logo-picinguaba.svg" width="230" alt="Picinguaba" />
 </p>	
 
 <p align="center">
@@ -45,13 +45,13 @@ Site composto por 6 seções:
 Esse projeto foi desenvolvido com as seguintes tecnologias e suas dependencias:
 
 - ReactJS
-    - react-bootstrap
-    - react-helmet-async
-    - body-scroll-lock
-    - styled-components
-    - react-router-dom
-    - axios
-    - gsap
+    - **react-bootstrap** - para reponsividade do website e divisão de colunas
+    - **react-helmet-async** - para administrar dinamicamente o Head das páginas
+    - **body-scroll-lock** -  para ativar / desativar o scroll vertical(Y) da página
+    - **styled-components** - otimiza a estilização do documento voltada a React
+    - **react-router-dom** - para criar rotas para as páginas desejadas
+    - **axios** - para consumir a API do banco de dados
+    - **gsap** - efeitos especiais no layout
 
 ---
 
