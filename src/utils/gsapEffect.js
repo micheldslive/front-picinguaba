@@ -29,3 +29,17 @@ export const gsapTopEffect = (element) => {
     once: true,
   });
 };
+
+export const gsapMoveEffect = (element) => {
+  const animate = gsap.to(element, {
+    xPercent: -150,
+    ease: "none",
+  });
+  ScrollTrigger.create({
+    trigger: element,
+    animation: animate,
+    start: "top top+=100",
+    end: "top top-=100",
+    scrub: 1
+  });
+};

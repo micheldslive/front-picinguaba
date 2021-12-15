@@ -51,9 +51,9 @@ const Alimentacao = () => {
           content="Uma vila de pescadores preservada entre o mar e a floresta."
         />
       </Helmet>
-      <ImageBgTop background={Background} title={"Restaurantes"} />
+      <ImageBgTop background={Background} title={"Alimentação"} />
       <GlobalTitleContent>
-        <GlobalTitle>Acomodações</GlobalTitle>
+        <GlobalTitle>Restaurantes</GlobalTitle>
         <GlobalSubtitle>
           Os quiosques e restaurantes são um convite para desfrutar da
           gastronomia local em contato com a cultura da pesca de cerco, que

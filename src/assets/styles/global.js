@@ -125,3 +125,14 @@ export const GlobalSubtitle = styled.p`
   margin: 0 15px;
   text-align: center;
 `;
+
+export const Iframe = styled.iframe`
+  width: 100%;
+  height: 570px;
+  margin-bottom: -130px;
+  transition: 300ms;
+
+  @media (max-width: 800px) {
+    height: 450px;
+  }
+`;
