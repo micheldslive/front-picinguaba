@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { Helmet } from "react-helmet-async";
 import ImageBgTop from "components/background/image";
 import Background from "assets/images/roteiros/roteiros-bg.jpg";
