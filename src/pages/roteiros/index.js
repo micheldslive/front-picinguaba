@@ -12,6 +12,7 @@ import {
   RoteiroTitle,
 } from "assets/styles/roteiros";
 import { Container } from "assets/styles/global";
+import  Mapa  from "utils/map";
 
 export default class Roteiros extends Component {
   render() {
@@ -34,6 +35,7 @@ export default class Roteiros extends Component {
               </RoteiroCol>
             </RoteiroRow>
           </Container>
+          <Mapa/>
         </RoteirosContent>
       </>
     );
