@@ -24,9 +24,9 @@
 
 **"Projeto final do Gama Experience #39. A proposta foi desenvolver um guia turístico navegável sobre a Vila Picinguaba, com dicas sobre acomodações, roteiros, eventos e pontos para alimentação, mostrando um pouco de tudo que a Vila tem a oferecer. Vila Picinguaba em tupi-guarani significa, “refúgio dos peixes”. Picinguaba está localizada em uma tranquila baía no coração do Parque Natural da Mata Atlântica – floresta tropical e costeira, que se estende entre o Rio de Janeiro e São Paulo.**
 
-![https://github.com/micheldslive/front-picinguaba/blob/master/demo/demo.gif](https://github.com/micheldslive/front-picinguaba/blob/master/demo/demo.gif)
-
 #### 👀 Pré-visualização do Projeto: https://vilapicinguaba.vercel.app/
+#### API do Projeto: https://api-picinguaba.herokuapp.com/
+#### Repositório da API: https://github.com/GuilhermeGilCampbell/API_Picinguaba
 ---
 
 ## 📌 Seções
@@ -37,6 +37,7 @@ Site composto por 6 seções:
 - **Acomodação:** Página falando sobre os pontos de Acomodação da Vila;
 - **Roteiros:** Página indicando os melhores Roteiros da Vila;
 - **Eventos:** Página falando dos eventos mais importantes na Vila;
+- **Detalhes:** Página de detalhes dos eventos, roteiros, pousadas e restaurantes da Vila;
 - **404:** Página de erro que será exibida quando o endereço for inexistente;
 
 ---
