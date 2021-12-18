@@ -70,6 +70,7 @@ export const Number = styled.h1`
   color: var(--gray3);
   font-size: 170px;
   transition: 300ms;
+  font-weight: 100;
 
   @media (max-width: 1180px) {
     font-size: 120px;
@@ -82,16 +83,16 @@ export const RoteiroCard = styled(Link)`
   display: flex;
   position: relative;
 
-  &:nth-child(1) ${CardNumber}, &:nth-child(3) ${CardNumber} {
+  &:nth-child(1) ${CardNumber}, &:nth-child(3) ${CardNumber}, &:nth-child(5n) ${CardNumber}, &:nth-child(7n) ${CardNumber}  {
     left: 0;
   }
 
-  &:nth-child(2) ${CardNumber}, &:nth-child(4) ${CardNumber} {
+  &:nth-child(2) ${CardNumber}, &:nth-child(4) ${CardNumber}, &:nth-child(6n) ${CardNumber}, &:nth-child(8n) ${CardNumber} {
     right: 0;
   }
 
   @media (min-width: 1180px) {
-    &:nth-child(1) ${CardContent}::before, &:nth-child(3) ${CardContent}::before {
+    &:nth-child(1) ${CardContent}::before, &:nth-child(3) ${CardContent}::before, &:nth-child(5n) ${CardContent}::before, &:nth-child(7n) ${CardContent}::before {
       content: "";
       background: url(${LineLeft});
       left: 600px;
@@ -107,7 +108,7 @@ export const RoteiroCard = styled(Link)`
       }
     }
 
-    &:nth-child(2) ${CardContent}::before {
+    &:nth-child(2) ${CardContent}::before, &:nth-child(6n) ${CardContent}::before, &:nth-child(4) ${CardContent}::before, &:nth-child(8n) ${CardContent}::before {
       content: "";
       background: url(${LineRight});
       left: 510px;
@@ -126,15 +127,19 @@ export const RoteiroCard = styled(Link)`
         left: 415px;
       }
     }
+
+    &:last-child ${CardContent}::before {
+      display: none;
+    }
   }
 
 
   @media (min-width: 770px) {
-    &:nth-child(1) ${CardContent}, &:nth-child(3) ${CardContent} {
+    &:nth-child(1) ${CardContent}, &:nth-child(3) ${CardContent}, &:nth-child(5n) ${CardContent}, &:nth-child(7n) ${CardContent} {
       padding-left: 25%;
     }
 
-    &:nth-child(2) ${CardContent}, &:nth-child(4) ${CardContent} {
+    &:nth-child(2) ${CardContent}, &:nth-child(4) ${CardContent}, &:nth-child(6n) ${CardContent}, &:nth-child(8n) ${CardContent} {
       padding-right: 25%;
     }
   }
@@ -147,6 +152,14 @@ export const RoteiroCard = styled(Link)`
       &:nth-child(2)
       ${CardInfo},
       &:nth-child(4)
+      ${CardInfo},
+      &:nth-child(5n)
+      ${CardIMG},
+      &:nth-child(7n)
+      ${CardIMG},
+      &:nth-child(6n)
+      ${CardInfo},
+      &:nth-child(8n)
       ${CardInfo} {
       order: 1;
     }
@@ -158,6 +171,14 @@ export const RoteiroCard = styled(Link)`
       &:nth-child(1)
       ${CardInfo},
       &:nth-child(3)
+      ${CardInfo},
+      &:nth-child(6n)
+      ${CardIMG},
+      &:nth-child(8n)
+      ${CardIMG},
+      &:nth-child(5n)
+      ${CardInfo},
+      &:nth-child(7n)
       ${CardInfo} {
       order: 2;
     }
